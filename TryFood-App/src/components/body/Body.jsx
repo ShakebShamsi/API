@@ -17,30 +17,69 @@ const Body = () => {
             );
 
             if (!response.ok) {
-               throw new Error(`Request failed with status ${response.status}`);
+               throw new Error(
+                  `Request failed with status ${response.status}`
+               );
             }
 
             const json = await response.json();
-            const restaurants = json?.data?.cards
-               ?.map((card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-               .find((restaurants) => Array.isArray(restaurants)) ?? [];
+
+            const restaurants =
+               json?.data?.cards
+                  ?.map(
+                     (card) =>
+                        card?.card?.card?.gridElements?.infoWithStyle
+                           ?.restaurants
+                  )
+                  .find((restaurants) => Array.isArray(restaurants)) ?? [];
+
+            console.log('Restaurants:', restaurants);
 
             setListOfRestaurants(restaurants);
             setFilteredRestaurant(restaurants);
          } catch (error) {
-            console.error('Unable to fetch restaurants:', error);
+            console.error(
+               'Unable to fetch restaurants:',
+               error
+            );
          }
       };
 
       loadRestaurants();
    }, []);
 
-   return listOfRestaurants.length === 0 ? (
-      <Shimmer />
-   ) : (
+   const handleSearch = () => {
+      const filtered = listOfRestaurants.filter((restaurant) =>
+         restaurant?.info?.name
+            ?.toLowerCase()
+            .includes(searchText.toLowerCase())
+      );
+
+      setFilteredRestaurant(filtered);
+   };
+
+   const handleTopRated = () => {
+      const filtered = listOfRestaurants.filter(
+         (restaurant) =>
+            Number(restaurant?.info?.avgRating) > 4
+      );
+
+      setFilteredRestaurant(filtered);
+   };
+
+   if (listOfRestaurants.length === 0) {
+      return <Shimmer />;
+   }
+
+   return (
       <div className="body">
+
+         {/* FILTER */}
          <div className="filter">
+
+            {/* SEARCH */}
             <div className="search">
+
                <input
                   type="text"
                   placeholder="Search a restaurant you want..."
@@ -49,45 +88,51 @@ const Body = () => {
                   onChange={(e) => {
                      setSearchText(e.target.value);
                   }}
-               />
-               <button
-                  onClick={() => {
-                     console.log(searchText);
-
-                     const filteredRestaurant = listOfRestaurants.filter((res) =>
-                        res.info.name.toLowerCase().includes(searchText.toLowerCase())
-                     );
-
-                     setFilteredRestaurant(filteredRestaurant);
+                  onKeyDown={(e) => {
+                     if (e.key === 'Enter') {
+                        handleSearch();
+                     }
                   }}
-               >
+               />
+
+               <button onClick={handleSearch}>
                   Search
                </button>
+
             </div>
+
+            {/* TOP RATED */}
             <button
                className="filter-btn"
-               onClick={() => {
-                  const filteredList = listOfRestaurants.filter(
-                     (res) => res.info.avgRating > 4
-                  );
-
-                  setFilteredRestaurant(filteredList);
-                  console.log(filteredList);
-               }}
+               onClick={handleTopRated}
             >
                Top Rated Restaurants
             </button>
+
          </div>
+
+         {/* RESTAURANTS */}
          <div className="res-container">
-               {filteredRestaurant.map((restaurant) => (
+
+            {filteredRestaurant.map((restaurant) => {
+
+               const restaurantId =
+                  restaurant?.info?.id;
+
+               return (
                   <Link
-                     key={restaurant.info.id}
-                     to={`/restaurant/${restaurant.info.id}`}
+                     key={restaurantId}
+                     to={`/restaurant/${restaurantId}`}
                   >
-                     <RestaurantCard resData={restaurant} />
+                     <RestaurantCard
+                        resData={restaurant}
+                     />
                   </Link>
-               ))}
+               );
+            })}
+
          </div>
+
       </div>
    );
 };
