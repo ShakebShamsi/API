@@ -123,6 +123,7 @@ const Body = () => {
                   <Link
                      key={restaurantId}
                      to={`/restaurant/${restaurantId}`}
+                     className="restaurant-link"
                   >
                      <RestaurantCard
                         resData={restaurant}

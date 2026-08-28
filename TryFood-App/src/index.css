@@ -333,3 +333,8 @@ button {
 		grid-template-columns: 1fr;
 	}
 }
+
+.restaurant-link {
+   text-decoration: none;
+   color: inherit;
+}
