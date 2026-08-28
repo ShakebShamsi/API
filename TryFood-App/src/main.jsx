@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -8,6 +7,7 @@ import Contact from "./components/contact/Contact"
 import Cart from './components/cart/Cart.jsx';
 import Error from './components/error/Error.jsx';
 import Body from './components/body/Body.jsx';
+import RestaurantMenu from './components/restaurantMenu/RestaurantMenu.jsx';
 
 
 const appRouter = createBrowserRouter([
@@ -32,15 +32,17 @@ const appRouter = createBrowserRouter([
          {
             path: "/cart",
             element: <Cart />
+         },
+         {
+            path: "/restaurants/:resId",
+            element: <RestaurantMenu />
          }
 
       ],
-      errorElement:<Error/>,
+      errorElement: <Error />,
    }
 ])
 
 createRoot(document.getElementById('root')).render(
-   <StrictMode>
-      <RouterProvider router={appRouter} />
-   </StrictMode>,
+   <RouterProvider router={appRouter} />
 )
