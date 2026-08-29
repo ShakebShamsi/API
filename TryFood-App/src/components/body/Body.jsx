@@ -49,8 +49,8 @@ const Body = () => {
    }, []);
 
    const handleSearch = () => {
-      const filtered = listOfRestaurants.filter((restaurant) =>
-         restaurant?.info?.name
+      const filtered = listOfRestaurants.filter((restaurants) =>
+         restaurants?.info?.name
             ?.toLowerCase()
             .includes(searchText.toLowerCase())
       );
@@ -60,8 +60,8 @@ const Body = () => {
 
    const handleTopRated = () => {
       const filtered = listOfRestaurants.filter(
-         (restaurant) =>
-            Number(restaurant?.info?.avgRating) > 4
+         (restaurants) =>
+            Number(restaurants?.info?.avgRating) > 4
       );
 
       setFilteredRestaurant(filtered);
@@ -82,7 +82,7 @@ const Body = () => {
 
                <input
                   type="text"
-                  placeholder="Search a restaurant you want..."
+                  placeholder="Search a restaurants you want..."
                   className="searchBox"
                   value={searchText}
                   onChange={(e) => {
@@ -114,19 +114,19 @@ const Body = () => {
          {/* RESTAURANTS */}
          <div className="res-container">
 
-            {filteredRestaurant.map((restaurant) => {
+            {filteredRestaurant.map((restaurants) => {
 
                const restaurantId =
-                  restaurant?.info?.id;
+                  restaurants?.info?.id;
 
                return (
                   <Link
                      key={restaurantId}
-                     to={`/restaurant/${restaurantId}`}
-                     className="restaurant-link"
+                     to={`/restaurants/${restaurantId}`}
+                     className="restaurants-link"
                   >
                      <RestaurantCard
-                        resData={restaurant}
+                        resData={restaurants}
                      />
                   </Link>
                );
