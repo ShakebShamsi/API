@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'; 
 import ShimmerMenu from '../ShimmerMenu';
 
 function RestaurantMenu() {
@@ -13,7 +13,7 @@ function RestaurantMenu() {
    const fetchMenu = async () => {
       try {
          const response = await fetch(
-            `/api/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9634474&lng=77.66991569999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`
+            `/api/m api/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9634474&lng=77.66991569999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`
          );
 
          console.log('Status:', response.status);
