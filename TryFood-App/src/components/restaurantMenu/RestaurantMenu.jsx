@@ -1,40 +1,18 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ShimmerMenu from '../ShimmerMenu';
 import { CDN_URL } from '../../utils/constants';
+import useRestaurantMenu from '../../utils/useRestaurantMenu';
 
 function RestaurantMenu() {
-   const [resInfo, setResInfo] = useState(null);
    const { resId } = useParams();
 
-   useEffect(() => {
-      fetchMenu();
-   }, [resId]);
-
-   const fetchMenu = async () => {
-      try {
-         const response = await fetch(
-            `/api/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9634474&lng=77.66991569999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`
-         );
-
-         console.log('Status:', response.status);
-         console.log('URL:', response.url);
-
-         if (!response.ok) {
-            throw new Error(`Request failed with status ${response.status}`);
-         }
-
-         const json = await response.json();
-
-         console.log('Menu response:', json);
-
-         setResInfo(json.data);
-      } catch (error) {
-         console.error('Unable to fetch menu:', error);
-      }
-   };
+   const { resInfo, error } = useRestaurantMenu(resId);
 
    if (resInfo === null) {
+      if (error) {
+         return <div className="no-items">Unable to load the restaurant menu.</div>;
+      }
+
       return <ShimmerMenu />;
    }
 
@@ -113,9 +91,9 @@ function RestaurantMenu() {
 
             {menuItems.length > 0 ? (
                <div className="menu-items-container">
-                  {menuItems.map((item) => (
+                  {menuItems.map((item, index) => (
                      item && (
-                        <div key={item?.id} className="menu-item">
+                        <div key={`${item?.id}-${index}`} className="menu-item">
                            <div className="menu-item-wrapper">
                               <div className="menu-item-content">
                                  <h3 className="item-name">{item?.name || 'Unknown Item'}</h3>
