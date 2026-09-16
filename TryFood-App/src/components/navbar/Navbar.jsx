@@ -10,7 +10,9 @@ const Navbar = () => {
    return (
       <div className="header">
          <div className="logo-container">
-            <img src='../../../logo.png' alt="App Logo" className="logo" />
+            <Link to="/">
+               <img src='../../../logo.png' alt="App Logo" className="logo" />
+            </Link>
          </div>
          <div className="nav-items">
             <ul>
