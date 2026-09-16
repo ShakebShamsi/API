@@ -74,8 +74,9 @@
 }
 
 .res-card-content em {
-   display: block;
+   display: -webkit-box;
 
+   height: 42px;
    min-height: 42px;
 
    overflow: hidden;
@@ -87,6 +88,9 @@
    font-style: normal;
 
    line-height: 1.6;
+
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
 }
 
 .res-card-content h4 {
@@ -104,4 +108,3 @@
 
    font-weight: 800;
 }
-
