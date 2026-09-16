@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import './Body.css';
 import RestaurantCard from '../restaurantCard/RestaurantCard';
-import Shimmer from '../Shimmer';
+import Shimmer from '../shimmer/Shimmer';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../../utils/useOnlineStatus';
 

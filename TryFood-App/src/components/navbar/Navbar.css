@@ -1,0 +1,105 @@
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+
+.header {
+   position: sticky;
+
+   top: 0;
+
+   z-index: 10;
+
+   display: flex;
+
+   align-items: center;
+
+   justify-content: space-between;
+
+   min-height: 80px;
+
+   padding: 10px clamp(20px, 6vw, 96px);
+
+   background: #ffffff;
+
+   border-bottom: 1px solid #eeeeee;
+
+   box-shadow: 0 2px 12px rgba(40, 44, 63, 0.08);
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-container {
+   display: flex;
+
+   align-items: center;
+}
+
+.logo {
+   width: 56px;
+   height: 56px;
+
+   object-fit: contain;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav-items ul {
+   display: flex;
+
+   align-items: center;
+
+   gap: clamp(18px, 3vw, 40px);
+
+   margin: 0;
+   padding: 0;
+
+   list-style: none;
+}
+
+.nav-items li {
+   color: #3d4152;
+
+   font-size: 15px;
+   font-weight: 700;
+
+   cursor: pointer;
+
+   transition: color 160ms ease;
+}
+
+.nav-items li:hover {
+   color: #fc8019;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.loginBtn {
+   padding: 10px 20px;
+
+   color: #ffffff;
+
+   background: #fc8019;
+
+   border-radius: 4px;
+
+   font-size: 14px;
+   font-weight: 800;
+
+   transition:
+      background-color 160ms ease,
+      transform 160ms ease;
+}
+
+.loginBtn:hover {
+   background: #e56f0b;
+
+   transform: translateY(-1px);
+}

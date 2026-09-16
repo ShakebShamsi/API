@@ -1,0 +1,803 @@
+/* =========================================================
+   SWIGGY HOME PAGE SHIMMER
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+.home-shimmer {
+   width: 100%;
+   min-height: 100vh;
+
+   margin: 0;
+   padding: 0;
+
+   background: #ffffff;
+
+   color: #282c3f;
+
+   overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SHIMMER ANIMATION
+   ========================================================= */
+
+@keyframes home-shimmer-animation {
+   0% {
+      background-position: -500px 0;
+   }
+
+   100% {
+      background-position: 500px 0;
+   }
+}
+
+
+/* Common skeleton animation */
+
+.home-shimmer [class^="shimmer-"]:not(
+   .shimmer-header,
+   .shimmer-header-left,
+   .shimmer-header-right,
+   .shimmer-location,
+   .shimmer-category-row,
+   .shimmer-category,
+   .shimmer-restaurant-grid,
+   .shimmer-restaurant-content,
+   .shimmer-section-heading
+) {
+   background-color: #eeeeee;
+
+   background-image: linear-gradient(
+      90deg,
+      #eeeeee 0px,
+      #f7f7f7 100px,
+      #eeeeee 200px
+   );
+
+   background-size: 500px 100%;
+
+   animation:
+      home-shimmer-animation
+      1.5s
+      infinite
+      linear;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.shimmer-header {
+   position: relative;
+
+   display: flex;
+
+   align-items: center;
+
+   justify-content: space-between;
+
+   width: 100%;
+
+   height: 80px;
+
+   padding: 0 clamp(20px, 6vw, 96px);
+
+   background: #ffffff;
+
+   border-bottom: 1px solid #eeeeee;
+
+   box-shadow: 0 2px 10px rgba(40, 44, 63, 0.06);
+}
+
+
+/* =========================================================
+   HEADER LEFT
+   ========================================================= */
+
+.shimmer-header-left {
+   display: flex;
+
+   align-items: center;
+
+   gap: 28px;
+
+   background: transparent !important;
+}
+
+
+/* Logo */
+
+.shimmer-logo {
+   width: 48px;
+   height: 48px;
+
+   border-radius: 8px;
+}
+
+
+/* Location */
+
+.shimmer-location {
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 7px;
+
+   width: 170px;
+
+   background: transparent !important;
+}
+
+.shimmer-location-line {
+   width: 105px;
+   height: 10px;
+
+   border-radius: 3px;
+}
+
+.shimmer-location-subline {
+   width: 150px;
+   height: 8px;
+
+   border-radius: 3px;
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+   ========================================================= */
+
+.shimmer-header-right {
+   display: flex;
+
+   align-items: center;
+
+   gap: 30px;
+
+   background: transparent !important;
+}
+
+.shimmer-nav-item {
+   width: 70px;
+   height: 10px;
+
+   border-radius: 3px;
+}
+
+.shimmer-nav-item.small {
+   width: 50px;
+}
+
+.shimmer-profile {
+   width: 34px;
+   height: 34px;
+
+   border-radius: 50%;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.shimmer-home-container {
+   width: min(1200px, calc(100% - 40px));
+
+   margin: 0 auto;
+
+   padding: 30px 0 80px;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.shimmer-search {
+   display: flex;
+
+   align-items: center;
+
+   justify-content: space-between;
+
+   width: 100%;
+
+   height: 48px;
+
+   margin-bottom: 34px;
+
+   padding: 0 16px;
+
+   background: #f3f3f3 !important;
+
+   border-radius: 8px;
+
+   animation: none !important;
+}
+
+.shimmer-search-placeholder {
+   width: 160px;
+   height: 10px;
+
+   background: #dddddd !important;
+
+   border-radius: 3px;
+
+   animation: none !important;
+}
+
+.shimmer-search-icon {
+   width: 17px;
+   height: 17px;
+
+   background: #dddddd !important;
+
+   border-radius: 50%;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.shimmer-section-heading {
+   display: flex;
+
+   align-items: center;
+
+   width: 100%;
+
+   height: 28px;
+
+   margin-bottom: 20px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-heading-line {
+   width: 205px;
+   height: 19px;
+
+   border-radius: 4px;
+}
+
+.shimmer-heading-line.restaurant-heading {
+   width: 260px;
+}
+
+
+/* =========================================================
+   CATEGORY SECTION
+   ========================================================= */
+
+.shimmer-category-section {
+   width: 100%;
+
+   margin-bottom: 46px;
+
+   padding-bottom: 30px;
+
+   border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   CATEGORY ROW
+   ========================================================= */
+
+.shimmer-category-row {
+   display: flex;
+
+   align-items: flex-start;
+
+   gap: 32px;
+
+   width: 100%;
+
+   overflow: hidden;
+
+   padding: 4px 2px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.shimmer-category {
+   display: flex;
+
+   flex: 0 0 100px;
+
+   flex-direction: column;
+
+   align-items: center;
+
+   gap: 10px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+
+/* Category image */
+
+.shimmer-category-image {
+   width: 90px;
+   height: 90px;
+
+   border-radius: 50%;
+}
+
+
+/* Category name */
+
+.shimmer-category-name {
+   width: 70px;
+   height: 9px;
+
+   border-radius: 3px;
+}
+
+
+/* =========================================================
+   RESTAURANT SECTION
+   ========================================================= */
+
+.shimmer-restaurant-section {
+   width: 100%;
+
+   margin-bottom: 48px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   RESTAURANT GRID
+   ========================================================= */
+
+.shimmer-restaurant-grid {
+   display: grid;
+
+   grid-template-columns:
+      repeat(
+         4,
+         minmax(0, 1fr)
+      );
+
+   gap: 28px 24px;
+
+   width: 100%;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   RESTAURANT CARD
+   ========================================================= */
+
+.shimmer-restaurant-card {
+   min-width: 0;
+
+   background: #ffffff !important;
+
+   border-radius: 10px;
+
+   overflow: visible;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   RESTAURANT IMAGE
+   ========================================================= */
+
+.shimmer-restaurant-image {
+   position: relative;
+
+   width: 100%;
+
+   aspect-ratio: 1.45;
+
+   overflow: hidden;
+
+   background-color: #eeeeee;
+
+   background-image: linear-gradient(
+      90deg,
+      #eeeeee 0px,
+      #f7f7f7 100px,
+      #eeeeee 200px
+   );
+
+   background-size: 500px 100%;
+
+   border-radius: 10px;
+
+   animation:
+      home-shimmer-animation
+      1.5s
+      infinite
+      linear;
+}
+
+
+/* Image bottom overlay */
+
+.shimmer-image-overlay {
+   position: absolute;
+
+   right: 0;
+   bottom: 0;
+   left: 0;
+
+   height: 40px;
+
+   background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.04)
+   ) !important;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   RESTAURANT CONTENT
+   ========================================================= */
+
+.shimmer-restaurant-content {
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 8px;
+
+   padding: 12px 4px 0;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+
+/* Restaurant name */
+
+.shimmer-restaurant-name {
+   width: 75%;
+
+   height: 14px;
+
+   border-radius: 3px;
+}
+
+
+/* Rating */
+
+.shimmer-restaurant-rating {
+   width: 55%;
+
+   height: 10px;
+
+   border-radius: 3px;
+}
+
+
+/* Cuisine */
+
+.shimmer-restaurant-cuisine {
+   width: 85%;
+
+   height: 9px;
+
+   border-radius: 3px;
+}
+
+
+/* Location */
+
+.shimmer-restaurant-location {
+   width: 65%;
+
+   height: 9px;
+
+   border-radius: 3px;
+}
+
+
+/* =========================================================
+   SECOND SECTION
+   ========================================================= */
+
+.second-section {
+   padding-bottom: 30px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+   .shimmer-home-container {
+      width: 1200px;
+   }
+
+   .shimmer-category-row {
+      gap: 42px;
+   }
+
+   .shimmer-category {
+      flex-basis: 110px;
+   }
+
+   .shimmer-category-image {
+      width: 100px;
+      height: 100px;
+   }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+   .shimmer-header {
+      padding: 0 30px;
+   }
+
+   .shimmer-header-right {
+      gap: 18px;
+   }
+
+   .shimmer-nav-item {
+      width: 55px;
+   }
+
+   .shimmer-home-container {
+      width: calc(100% - 40px);
+   }
+
+
+   .shimmer-restaurant-grid {
+      grid-template-columns:
+         repeat(
+            3,
+            minmax(0, 1fr)
+         );
+
+      gap: 24px 18px;
+   }
+
+
+   .shimmer-category-row {
+      gap: 24px;
+   }
+
+   .shimmer-category {
+      flex-basis: 90px;
+   }
+
+   .shimmer-category-image {
+      width: 80px;
+      height: 80px;
+   }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+   .shimmer-header {
+      height: 68px;
+
+      padding: 0 16px;
+   }
+
+
+   .shimmer-header-left {
+      gap: 12px;
+   }
+
+
+   .shimmer-logo {
+      width: 42px;
+      height: 42px;
+   }
+
+
+   .shimmer-location {
+      width: 110px;
+   }
+
+   .shimmer-location-line {
+      width: 75px;
+   }
+
+   .shimmer-location-subline {
+      width: 105px;
+   }
+
+
+   /* Hide desktop navigation */
+
+   .shimmer-header-right {
+      gap: 0;
+   }
+
+   .shimmer-nav-item {
+      display: none;
+   }
+
+   .shimmer-profile {
+      width: 32px;
+      height: 32px;
+   }
+
+
+   /* Main */
+
+   .shimmer-home-container {
+      width: calc(100% - 24px);
+
+      padding-top: 20px;
+   }
+
+
+   /* Search */
+
+   .shimmer-search {
+      height: 44px;
+
+      margin-bottom: 28px;
+   }
+
+
+   /* Category */
+
+   .shimmer-category-section {
+      margin-bottom: 32px;
+
+      padding-bottom: 22px;
+   }
+
+   .shimmer-section-heading {
+      margin-bottom: 15px;
+   }
+
+   .shimmer-heading-line {
+      width: 170px;
+      height: 16px;
+   }
+
+
+   .shimmer-category-row {
+      gap: 18px;
+
+      overflow-x: auto;
+
+      scrollbar-width: none;
+   }
+
+   .shimmer-category-row::-webkit-scrollbar {
+      display: none;
+   }
+
+   .shimmer-category {
+      flex-basis: 78px;
+   }
+
+   .shimmer-category-image {
+      width: 70px;
+      height: 70px;
+   }
+
+   .shimmer-category-name {
+      width: 55px;
+      height: 8px;
+   }
+
+
+   /* Restaurant grid */
+
+   .shimmer-restaurant-grid {
+      grid-template-columns:
+         repeat(
+            2,
+            minmax(0, 1fr)
+         );
+
+      gap: 22px 14px;
+   }
+
+
+   .shimmer-restaurant-content {
+      gap: 6px;
+
+      padding-top: 9px;
+   }
+
+   .shimmer-restaurant-name {
+      height: 12px;
+   }
+
+   .shimmer-restaurant-rating {
+      height: 9px;
+   }
+
+   .shimmer-restaurant-cuisine,
+   .shimmer-restaurant-location {
+      height: 8px;
+   }
+
+
+   .shimmer-restaurant-section {
+      margin-bottom: 36px;
+   }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+   .shimmer-home-container {
+      width: calc(100% - 20px);
+   }
+
+
+   .shimmer-heading-line {
+      width: 150px;
+   }
+
+
+   .shimmer-restaurant-grid {
+      gap: 20px 12px;
+   }
+
+
+   .shimmer-category-row {
+      gap: 14px;
+   }
+
+   .shimmer-category {
+      flex-basis: 72px;
+   }
+
+   .shimmer-category-image {
+      width: 64px;
+      height: 64px;
+   }
+}

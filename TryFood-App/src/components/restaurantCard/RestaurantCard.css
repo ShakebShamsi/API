@@ -1,0 +1,107 @@
+/* =========================================================
+   RESTAURANT CARD
+   ========================================================= */
+
+.res-card {
+   min-width: 0;
+
+   overflow: hidden;
+
+   background: #ffffff;
+
+   border: 1px solid #eeeeee;
+
+   border-radius: 8px;
+
+   box-shadow: 0 2px 8px rgba(40, 44, 63, 0.08);
+
+   transition:
+      box-shadow 180ms ease,
+      transform 180ms ease;
+}
+
+.res-card:hover {
+   box-shadow: 0 8px 22px rgba(40, 44, 63, 0.14);
+
+   transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   RESTAURANT CARD IMAGE
+   ========================================================= */
+
+.res-logo {
+   display: block;
+
+   width: 100%;
+
+   aspect-ratio: 1.45;
+
+   object-fit: cover;
+}
+
+
+/* =========================================================
+   RESTAURANT CARD CONTENT
+   ========================================================= */
+
+.res-card-content {
+   padding: 14px 16px 16px;
+}
+
+.res-card-content h3 {
+   margin: 0 0 8px;
+
+   overflow: hidden;
+
+   color: #282c3f;
+
+   font-size: 18px;
+   font-weight: 800;
+
+   text-overflow: ellipsis;
+
+   white-space: nowrap;
+}
+
+.res-card-content hr {
+   margin: 0 0 10px;
+
+   border: 0;
+
+   border-top: 1px solid #eeeeee;
+}
+
+.res-card-content em {
+   display: block;
+
+   min-height: 42px;
+
+   overflow: hidden;
+
+   color: #686b78;
+
+   font-size: 13px;
+
+   font-style: normal;
+
+   line-height: 1.6;
+}
+
+.res-card-content h4 {
+   margin: 7px 0 0;
+
+   color: #686b78;
+
+   font-size: 13px;
+
+   font-weight: 600;
+}
+
+.res-card-content h4:first-of-type {
+   color: #3d8b40;
+
+   font-weight: 800;
+}
+

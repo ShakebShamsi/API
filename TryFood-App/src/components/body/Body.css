@@ -1,0 +1,109 @@
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.body {
+   width: min(1200px, calc(100% - 40px));
+
+   margin: 0 auto;
+
+   padding: 38px 0 72px;
+}
+
+
+/* =========================================================
+   FILTER
+   ========================================================= */
+
+.filter {
+   display: flex;
+
+   align-items: center;
+
+   justify-content: space-between;
+
+   gap: 20px;
+
+   margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search {
+   display: flex;
+
+   width: min(560px, 100%);
+
+   height: 50px;
+
+   overflow: hidden;
+
+   border: 1px solid #d9d9d9;
+
+   border-radius: 4px;
+
+   box-shadow: 0 2px 8px rgba(40, 44, 63, 0.08);
+}
+
+.searchBox {
+   min-width: 0;
+
+   flex: 1;
+
+   padding: 0 18px;
+
+   color: #282c3f;
+
+   border: 0;
+
+   outline: 0;
+}
+
+.searchBox::placeholder {
+   color: #93959f;
+}
+
+.search button,
+.filter-btn {
+   padding: 0 22px;
+
+   color: #ffffff;
+
+   background: #fc8019;
+
+   font-weight: 800;
+}
+
+.search button:hover,
+.filter-btn:hover {
+   background: #e56f0b;
+}
+
+
+/* =========================================================
+   FILTER BUTTON
+   ========================================================= */
+
+.filter-btn {
+   min-height: 50px;
+
+   border-radius: 4px;
+
+   white-space: nowrap;
+}
+
+
+/* =========================================================
+   RESTAURANT GRID
+   ========================================================= */
+
+.res-container {
+   display: grid;
+
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+
+   gap: 32px 24px;
+}

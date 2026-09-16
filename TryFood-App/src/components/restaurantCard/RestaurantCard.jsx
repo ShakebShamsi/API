@@ -1,4 +1,5 @@
 import { CDN_URL } from '../../utils/constants';
+import './RestaurantCard.css';
 
 const RestaurantCard = (props) => {
    const { resData } = props;

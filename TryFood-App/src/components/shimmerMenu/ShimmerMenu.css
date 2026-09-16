@@ -1,0 +1,929 @@
+/* =========================================================
+   SWIGGY STYLE RESTAURANT SHIMMER
+   ========================================================= */
+
+.swiggy-shimmer {
+   width: 100%;
+   min-height: 100vh;
+
+   background: #ffffff;
+
+   color: #282c3f;
+
+   animation: shimmer-page-fade 0.25s ease;
+}
+
+
+/* =========================================================
+   SHIMMER ANIMATION
+   ========================================================= */
+
+@keyframes shimmer-loading {
+   0% {
+      background-position: -500px 0;
+   }
+
+   100% {
+      background-position: 500px 0;
+   }
+}
+
+@keyframes shimmer-page-fade {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
+
+/* Every skeleton */
+
+.swiggy-shimmer [class*="shimmer-"] {
+   background-color: #eeeeee;
+   background-image: linear-gradient(
+      90deg,
+      #eeeeee 0px,
+      #f7f7f7 100px,
+      #eeeeee 200px
+   );
+
+   background-size: 500px 100%;
+
+   animation: shimmer-loading 1.5s infinite linear;
+}
+
+
+/* =========================================================
+   CENTERED PAGE
+   ========================================================= */
+
+.swiggy-shimmer-container {
+   width: 800px;
+   max-width: calc(100% - 40px);
+
+   margin: 0 auto;
+
+   padding: 24px 0 80px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.shimmer-breadcrumb {
+   display: flex;
+
+   align-items: center;
+
+   gap: 7px;
+
+   height: 15px;
+
+   margin-bottom: 20px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-breadcrumb span {
+   display: block;
+
+   width: 42px;
+   height: 7px;
+
+   border-radius: 2px;
+}
+
+.shimmer-breadcrumb span.short {
+   width: 25px;
+}
+
+.shimmer-breadcrumb i {
+   width: 5px;
+   height: 5px;
+
+   background: #e6e6e6;
+
+   border-radius: 50%;
+}
+
+
+/* =========================================================
+   RESTAURANT INFORMATION
+   ========================================================= */
+
+.shimmer-restaurant {
+   padding-bottom: 18px;
+
+   border-bottom: 1px solid #eeeeee;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-restaurant-title {
+   width: 130px;
+   height: 22px;
+
+   margin-bottom: 10px;
+
+   border-radius: 4px;
+}
+
+.shimmer-cuisine {
+   width: 250px;
+   height: 10px;
+
+   margin-bottom: 15px;
+
+   border-radius: 3px;
+}
+
+
+/* =========================================================
+   RESTAURANT META
+   ========================================================= */
+
+.shimmer-restaurant-meta {
+   display: flex;
+
+   align-items: center;
+
+   gap: 10px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-rating {
+   display: flex;
+
+   align-items: center;
+
+   gap: 5px;
+
+   width: 80px;
+   height: 18px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-rating span:first-child {
+   width: 32px;
+   height: 16px;
+
+   border-radius: 4px;
+}
+
+.shimmer-rating span:last-child {
+   width: 35px;
+   height: 8px;
+
+   border-radius: 2px;
+}
+
+.shimmer-meta-dot {
+   width: 4px;
+   height: 4px;
+
+   background: #d8d8d8 !important;
+
+   border-radius: 50%;
+
+   animation: none !important;
+}
+
+.shimmer-meta-text {
+   width: 75px;
+   height: 9px;
+
+   border-radius: 3px;
+}
+
+.shimmer-meta-text.small {
+   width: 65px;
+}
+
+
+/* =========================================================
+   RESTAURANT DETAILS
+   ========================================================= */
+
+.shimmer-details {
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 16px;
+
+   padding: 18px 0;
+
+   background: transparent !important;
+
+   border-bottom: 1px solid #eeeeee;
+
+   animation: none !important;
+}
+
+.shimmer-detail-row {
+   display: flex;
+
+   align-items: center;
+
+   gap: 12px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-detail-icon {
+   flex-shrink: 0;
+
+   width: 18px;
+   height: 18px;
+
+   border-radius: 50%;
+}
+
+.shimmer-detail-content {
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 7px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-detail-title {
+   width: 145px;
+   height: 10px;
+
+   border-radius: 3px;
+}
+
+.shimmer-detail-title.medium {
+   width: 120px;
+}
+
+.shimmer-detail-subtitle {
+   width: 190px;
+   height: 8px;
+
+   border-radius: 3px;
+}
+
+.shimmer-detail-subtitle.short {
+   width: 140px;
+}
+
+
+/* =========================================================
+   DEALS SECTION
+   ========================================================= */
+
+.shimmer-deals {
+   padding: 20px 0;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-section-title {
+   display: flex;
+
+   align-items: center;
+
+   height: 22px;
+
+   margin-bottom: 14px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-section-title div {
+   width: 110px;
+   height: 16px;
+
+   border-radius: 4px;
+}
+
+
+/* =========================================================
+   DEAL CARDS
+   ========================================================= */
+
+.shimmer-deals-row {
+   display: flex;
+
+   gap: 12px;
+
+   width: 100%;
+
+   overflow: hidden;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-deal-card {
+   display: flex;
+
+   align-items: center;
+
+   gap: 12px;
+
+   flex: 1;
+
+   min-width: 0;
+
+   height: 70px;
+
+   padding: 12px;
+
+   background: #ffffff !important;
+
+   border: 1px solid #e5e5e5;
+
+   border-radius: 10px;
+
+   animation: none !important;
+}
+
+.shimmer-deal-icon {
+   flex-shrink: 0;
+
+   width: 34px;
+   height: 34px;
+
+   border-radius: 50%;
+}
+
+.shimmer-deal-content {
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 7px;
+
+   min-width: 0;
+
+   flex: 1;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-deal-title {
+   width: 95px;
+   height: 10px;
+
+   border-radius: 3px;
+}
+
+.shimmer-deal-title.medium {
+   width: 75px;
+}
+
+.shimmer-deal-subtitle {
+   width: 70px;
+   height: 8px;
+
+   border-radius: 3px;
+}
+
+
+/* =========================================================
+   DISH SEARCH
+   ========================================================= */
+
+.shimmer-search {
+   display: flex;
+
+   align-items: center;
+
+   justify-content: space-between;
+
+   width: 100%;
+   height: 44px;
+
+   margin: 4px 0 14px;
+
+   padding: 0 14px;
+
+   background: #f2f2f2 !important;
+
+   border-radius: 8px;
+
+   animation: none !important;
+}
+
+.shimmer-search-text {
+   width: 115px;
+   height: 9px;
+
+   background: #dddddd !important;
+
+   border-radius: 3px;
+
+   animation: none !important;
+}
+
+.shimmer-search-icon {
+   width: 14px;
+   height: 14px;
+
+   background: #d9d9d9 !important;
+
+   border-radius: 50%;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   FILTER CHIPS
+   ========================================================= */
+
+.shimmer-filters {
+   display: flex;
+
+   align-items: center;
+
+   gap: 8px;
+
+   margin-bottom: 18px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-filter-chip {
+   display: flex;
+
+   align-items: center;
+
+   justify-content: center;
+
+   width: 58px;
+   height: 28px;
+
+   padding: 0 10px;
+
+   background: #ffffff !important;
+
+   border: 1px solid #e5e5e5;
+
+   border-radius: 15px;
+
+   animation: none !important;
+}
+
+.shimmer-filter-chip span {
+   width: 30px;
+   height: 7px;
+
+   background: #e0e0e0 !important;
+
+   border-radius: 3px;
+
+   animation: none !important;
+}
+
+.shimmer-filter-chip.wide {
+   width: 82px;
+}
+
+
+/* =========================================================
+   MENU SECTION
+   ========================================================= */
+
+.shimmer-menu-section {
+   width: 100%;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-menu-section-header {
+   display: flex;
+
+   align-items: center;
+
+   justify-content: space-between;
+
+   width: 100%;
+
+   padding: 13px 0;
+
+   border-top: 1px solid #eeeeee;
+   border-bottom: 1px solid #eeeeee;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-recommended-title {
+   width: 125px;
+   height: 16px;
+
+   border-radius: 4px;
+}
+
+.shimmer-arrow {
+   width: 10px;
+   height: 10px;
+
+   background: #dddddd !important;
+
+   border-radius: 2px;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   MENU ITEMS
+   ========================================================= */
+
+.shimmer-menu-items {
+   display: flex;
+
+   flex-direction: column;
+
+   width: 100%;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-menu-item {
+   display: flex;
+
+   align-items: flex-start;
+
+   justify-content: space-between;
+
+   width: 100%;
+
+   min-height: 150px;
+
+   padding: 20px 0;
+
+   gap: 24px;
+
+   background: #ffffff !important;
+
+   border-bottom: 1px solid #eeeeee;
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   ITEM LEFT CONTENT
+   ========================================================= */
+
+.shimmer-item-content {
+   display: flex;
+
+   flex: 1;
+
+   flex-direction: column;
+
+   align-items: flex-start;
+
+   min-width: 0;
+
+   padding-top: 2px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+
+/* Veg icon */
+
+.shimmer-veg-icon {
+   width: 13px;
+   height: 13px;
+
+   margin-bottom: 7px;
+
+   background: #e0e0e0 !important;
+
+   border: 1px solid #d2d2d2;
+
+   border-radius: 2px;
+
+   animation: none !important;
+}
+
+
+/* Item name */
+
+.shimmer-item-name {
+   width: 190px;
+   height: 14px;
+
+   margin-bottom: 9px;
+
+   border-radius: 3px;
+}
+
+
+/* Price */
+
+.shimmer-item-price {
+   width: 55px;
+   height: 10px;
+
+   margin-bottom: 9px;
+
+   border-radius: 3px;
+}
+
+
+/* Rating */
+
+.shimmer-item-rating {
+   width: 70px;
+   height: 9px;
+
+   margin-bottom: 10px;
+
+   border-radius: 3px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.shimmer-item-description {
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 6px;
+
+   width: 100%;
+
+   max-width: 460px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-item-description span {
+   display: block;
+
+   width: 100%;
+   height: 8px;
+
+   border-radius: 3px;
+}
+
+.shimmer-item-description span:nth-child(2) {
+   width: 90%;
+}
+
+.shimmer-item-description span.last {
+   width: 60%;
+}
+
+
+/* =========================================================
+   ITEM IMAGE
+   ========================================================= */
+
+.shimmer-item-image-area {
+   position: relative;
+
+   flex: 0 0 110px;
+
+   width: 110px;
+   height: 110px;
+
+   background: transparent !important;
+
+   animation: none !important;
+}
+
+.shimmer-item-image {
+   width: 110px;
+   height: 110px;
+
+   background-color: #eeeeee;
+
+   border-radius: 10px;
+}
+
+
+/* =========================================================
+   ADD BUTTON
+   ========================================================= */
+
+.shimmer-add-button {
+   position: absolute;
+
+   left: 50%;
+
+   bottom: -8px;
+
+   width: 72px;
+   height: 27px;
+
+   background: #ffffff !important;
+
+   border: 1px solid #dddddd;
+
+   border-radius: 5px;
+
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+   transform: translateX(-50%);
+
+   animation: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 840px) {
+
+   .swiggy-shimmer-container {
+      width: calc(100% - 40px);
+   }
+
+   .shimmer-deals-row {
+      overflow-x: hidden;
+   }
+
+   .shimmer-deal-card {
+      min-width: 210px;
+   }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+   .swiggy-shimmer-container {
+      width: calc(100% - 24px);
+
+      padding-top: 18px;
+   }
+
+
+   /* Restaurant */
+
+   .shimmer-restaurant-title {
+      width: 110px;
+      height: 20px;
+   }
+
+   .shimmer-cuisine {
+      width: 190px;
+   }
+
+
+   /* Meta */
+
+   .shimmer-meta-text {
+      width: 55px;
+   }
+
+   .shimmer-meta-text.small {
+      width: 50px;
+   }
+
+
+   /* Deals */
+
+   .shimmer-deals-row {
+      overflow-x: auto;
+
+      scrollbar-width: none;
+   }
+
+   .shimmer-deals-row::-webkit-scrollbar {
+      display: none;
+   }
+
+   .shimmer-deal-card {
+      flex: 0 0 210px;
+
+      min-width: 210px;
+   }
+
+   .shimmer-deal-card.third {
+      display: none;
+   }
+
+
+   /* Menu */
+
+   .shimmer-menu-item {
+      min-height: 130px;
+
+      gap: 14px;
+
+      padding: 18px 0;
+   }
+
+
+   /* Image */
+
+   .shimmer-item-image-area {
+      flex-basis: 100px;
+
+      width: 100px;
+      height: 100px;
+   }
+
+   .shimmer-item-image {
+      width: 100px;
+      height: 100px;
+   }
+
+
+   /* Text */
+
+   .shimmer-item-name {
+      width: 150px;
+   }
+
+   .shimmer-item-description {
+      max-width: 100%;
+   }
+
+   .shimmer-item-description span:nth-child(3) {
+      display: none;
+   }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+   .swiggy-shimmer-container {
+      width: calc(100% - 20px);
+   }
+
+   .shimmer-menu-item {
+      gap: 10px;
+   }
+
+   .shimmer-item-image-area {
+      flex-basis: 88px;
+
+      width: 88px;
+      height: 88px;
+   }
+
+   .shimmer-item-image {
+      width: 88px;
+      height: 88px;
+   }
+
+   .shimmer-item-name {
+      width: 125px;
+   }
+
+   .shimmer-item-description span:nth-child(2) {
+      width: 80%;
+   }
+}

@@ -1,0 +1,26 @@
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+   padding: 26px 20px;
+
+   color: #ffffff;
+
+   background: #282c3f;
+
+   text-align: center;
+}
+
+.footer p {
+   margin: 0;
+
+   color: #bdbfc7;
+
+   font-size: 14px;
+}
+
+.footer strong {
+   color: #ffffff;
+}
