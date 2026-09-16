@@ -1,3 +1,5 @@
+//CUSTOM HOOK TO FETCH RESTAURANT MENU DATA
+
 import { useEffect, useState } from "react";
 import { MENU_API } from "./constants";
 
