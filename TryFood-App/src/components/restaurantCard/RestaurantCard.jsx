@@ -33,4 +33,30 @@ const RestaurantCard = (props) => {
    );
 };
 
+//Higher Order Component
+
+export const withPromotedLabel = (RestaurantCard) => {
+   return (props) => {
+      const badgeImage =
+         props?.resData?.info?.badges?.imageBadges?.[0]?.imageId;
+
+      return (
+         <div className="promoted-card">
+            {badgeImage && (
+               <div className="promoted-badge">
+                  <img
+                     src={CDN_URL + badgeImage}
+                     alt="Restaurant badge"
+                  />
+               </div>
+            )}
+
+            <RestaurantCard {...props} />
+         </div>
+      );
+   };
+};
+
+
+
 export default RestaurantCard;

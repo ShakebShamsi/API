@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { CDN_URL } from '../../utils/constants';
 import './Body.css';
-import RestaurantCard from '../restaurantCard/RestaurantCard';
+import RestaurantCard, { withPromotedLabel } from '../restaurantCard/RestaurantCard';
 import Shimmer from '../shimmer/Shimmer';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../../utils/useOnlineStatus';
@@ -11,11 +12,13 @@ const Body = () => {
 
    const [searchText, setSearchText] = useState('');
 
+   const RestaurantCardWithPromotedLabel = withPromotedLabel(RestaurantCard);
+
    useEffect(() => {
       const loadRestaurants = async () => {
          try {
             const response = await fetch(
-               '/api/dapi/restaurants/list/v5?lat=12.9634474&lng=77.66991569999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
+               '/api/dapi/restaurants/list/v5?lat=28.554609&lng=77.291263&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
             );
 
             if (!response.ok) {
@@ -133,9 +136,15 @@ const Body = () => {
                      to={`/restaurants/${restaurantId}`}
                      className="restaurants-link"
                   >
-                     <RestaurantCard
-                        resData={restaurants}
-                     />
+                     {restaurants?.info?.badges?.imageBadges?.[0]?.imageId ? (
+                        <RestaurantCardWithPromotedLabel
+                           resData={restaurants}
+                        />
+                     ) : (
+                        <RestaurantCard
+                           resData={restaurants}
+                        />
+                     )}
                   </Link>
                );
             })}
