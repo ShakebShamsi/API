@@ -100,10 +100,30 @@
    RESTAURANT GRID
    ========================================================= */
 
+/* Desktop */
 .res-container {
    display: grid;
-
    grid-template-columns: repeat(4, minmax(0, 1fr));
-
    gap: 32px 24px;
+}
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+   .res-container {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+   }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+   .res-container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+   .res-container {
+      grid-template-columns: 1fr;
+   }
 }
