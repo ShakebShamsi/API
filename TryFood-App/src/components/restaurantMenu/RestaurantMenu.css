@@ -197,9 +197,16 @@ body {
 
 .info-delivery {
    color: #686b78;
-
+   display: flex;
+   align-items: center;
    font-size: 12px;
    font-weight: 600;
+}
+.info-delivery svg {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+  transform: translateY(-2px);
 }
 
 

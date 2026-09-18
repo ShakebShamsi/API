@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { Bike } from "lucide-react";
 import ShimmerMenu from '../shimmerMenu/ShimmerMenu.jsx';
 import { CDN_URL } from '../../utils/constants';
 import useRestaurantMenu from '../../utils/useRestaurantMenu';
@@ -77,7 +78,7 @@ function RestaurantMenu() {
                      <div className="info-cost">{restaurantInfo?.costForTwoMessage}</div>
                   </div>
                   <div className="info-item">
-                     <div className="info-delivery">🚗 {restaurantInfo?.sla?.slaString}</div>
+                     <div className="info-delivery"> <Bike size={16} strokeWidth={2} />{restaurantInfo?.nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla?.slaString}</div>
                   </div>
                </div>
             </div>
