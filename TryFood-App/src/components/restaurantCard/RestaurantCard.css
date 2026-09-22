@@ -10,45 +10,50 @@
    background: #ffffff;
 
    border: 1px solid #eeeeee;
-
-   border-radius: 8px;
+   border-radius: 10px;
 
    box-shadow: 0 2px 8px rgba(40, 44, 63, 0.08);
 
    transition:
-      box-shadow 180ms ease,
-      transform 180ms ease;
+      transform 180ms ease,
+      box-shadow 180ms ease;
 }
 
 .res-card:hover {
-   box-shadow: 0 8px 22px rgba(40, 44, 63, 0.14);
-
    transform: translateY(-3px);
+
+   box-shadow: 0 8px 22px rgba(40, 44, 63, 0.14);
 }
 
 
 /* =========================================================
-   RESTAURANT CARD IMAGE
+   RESTAURANT IMAGE
    ========================================================= */
 
 .res-logo {
    display: block;
 
    width: 100%;
-
    aspect-ratio: 1.45;
 
    object-fit: cover;
+
+   background: #f5f5f5;
 }
 
 
 /* =========================================================
-   RESTAURANT CARD CONTENT
+   RESTAURANT CONTENT
    ========================================================= */
 
 .res-card-content {
-   padding: 14px 16px 16px;
+   padding: 13px 15px 15px;
 }
+
+
+/* =========================================================
+   RESTAURANT NAME
+   ========================================================= */
 
 .res-card-content h3 {
    margin: 0 0 8px;
@@ -60,18 +65,31 @@
    font-size: 18px;
    font-weight: 800;
 
-   text-overflow: ellipsis;
+   line-height: 1.25;
 
+   text-overflow: ellipsis;
    white-space: nowrap;
 }
 
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
 .res-card-content hr {
-   margin: 0 0 10px;
+   height: 1px;
+
+   margin: 0 0 9px;
 
    border: 0;
 
-   border-top: 1px solid #eeeeee;
+   background: #eeeeee;
 }
+
+
+/* =========================================================
+   CUISINES
+   ========================================================= */
 
 .res-card-content em {
    display: -webkit-box;
@@ -84,7 +102,6 @@
    color: #686b78;
 
    font-size: 13px;
-
    font-style: normal;
 
    line-height: 1.6;
@@ -93,84 +110,257 @@
    -webkit-line-clamp: 2;
 }
 
-.res-card-content h4 {
-   margin: 7px 0 0;
 
-   color: #686b78;
+/* =========================================================
+   RATING + DELIVERY TIME
+   ========================================================= */
 
-   font-size: 13px;
+.rating-time {
+   display: flex;
 
-   font-weight: 600;
+   align-items: center;
+
+   gap: 7px;
+
+   margin-top: 8px;
+
+   color: #282c3f;
+
+   font-size: 14px;
+   font-weight: 700;
+
+   line-height: 1;
 }
 
-.res-card-content h4:first-of-type {
-   color: #3d8b40;
 
-   font-weight: 800;
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.rating {
+   display: inline-flex;
+
+   align-items: center;
+
+   gap: 5px;
 }
 
 
+/* =========================================================
+   GREEN STAR CIRCLE
+   ========================================================= */
 
-/* HOC wrapper */
+.rating-badge {
+   width: 20px !important;
+   height: 20px !important;
 
+   min-width: 20px !important;
+   min-height: 20px !important;
+
+   padding: 0 !important;
+   margin: 0 !important;
+
+   display: inline-flex !important;
+   align-items: center !important;
+   justify-content: center !important;
+
+   flex: 0 0 20px !important;
+
+   background: #159447 !important;
+
+   border: none !important;
+   border-radius: 50% !important;
+
+   overflow: hidden;
+   box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RATING VALUE
+   ========================================================= */
+
+.rating-value {
+   color: #282c3f;
+
+   font-size: 16px;
+   font-weight: 700;
+
+}
+
+
+/* =========================================================
+   DELIVERY TIME
+   ========================================================= */
+
+.delivery-time {
+   color: #282c3f;
+
+   font-size: 16px;
+   font-weight: 700;
+}
+
+
+/* =========================================================
+   PROMOTED CARD WRAPPER
+   ========================================================= */
 
 .promoted-card {
    position: relative;
+
    width: 100%;
 }
 
 
-/* Badge ribbon */
-.restaurant-badge-ribbon {
-   position: absolute;
+/* =========================================================
+   PROMOTED BADGE
+   ========================================================= */
 
-   top: 8px;
-   left: 0;
-
-   max-width: 170px;
-   max-height: 40px;
-
-   z-index: 10;
-
-   overflow: hidden;
-
-   display: flex;
-   align-items: center;
-
-   pointer-events: none;
-}
 .promoted-badge {
    position: absolute;
+
    top: 8px;
    left: 0;
+
+   z-index: 20;
 
    width: 145px;
    height: 32px;
 
-   z-index: 20;
-
    display: flex;
-   align-items: center;
 
-   background: rgba(255, 255, 255, 0.95);
+   align-items: center;
 
    overflow: hidden;
 
-   border-radius: 0 3px 3px 0;
+   background: rgba(255, 255, 255, 0.96);
+
+   border-radius: 0 4px 4px 0;
+
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+   pointer-events: none;
 
    box-sizing: border-box;
 }
 
+
+/* =========================================================
+   PROMOTED BADGE IMAGE
+   ========================================================= */
+
 .promoted-badge img {
+   display: block;
+
    width: 100%;
    height: 100%;
 
-   display: block;
-
-   object-fit: contain;
-   object-position: left center;
-
    padding: 3px 8px;
 
+   object-fit: contain;
+
+   object-position: left center;
+
    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+   .res-card-content {
+      padding: 12px 13px 14px;
+   }
+
+   .res-card-content h3 {
+      font-size: 16px;
+   }
+
+   .res-card-content em {
+      font-size: 12px;
+   }
+
+   .rating-time {
+      font-size: 13px;
+   }
+
+   .rating-value,
+   .delivery-time,
+   .separator {
+      font-size: 13px;
+   }
+
+   .rating-badge {
+      width: 19px;
+      height: 19px;
+   }
+
+   .rating-badge svg {
+      width: 12px;
+      height: 12px;
+   }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+   .res-card {
+      border-radius: 8px;
+   }
+
+   .res-card-content {
+      padding: 10px 12px 12px;
+   }
+
+   .res-card-content h3 {
+      margin-bottom: 6px;
+
+      font-size: 15px;
+   }
+
+   .res-card-content hr {
+      margin-bottom: 7px;
+   }
+
+   .res-card-content em {
+      height: 38px;
+      min-height: 38px;
+
+      font-size: 11px;
+
+      line-height: 1.55;
+   }
+
+   .rating-time {
+      gap: 5px;
+
+      margin-top: 7px;
+   }
+
+   .rating {
+      gap: 4px;
+   }
+
+   .rating-badge {
+      width: 18px;
+      height: 18px;
+   }
+
+   .rating-badge svg {
+      width: 11px;
+      height: 11px;
+   }
+
+   .rating-value,
+   .delivery-time,
+   .separator {
+      font-size: 14px;
+   }
 }
