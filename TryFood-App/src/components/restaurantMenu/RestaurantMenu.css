@@ -23,6 +23,7 @@ body {
 .menu-container {
    width: 100%;
    min-height: 100vh;
+
    background: #ffffff;
    color: #1f1f1f;
 }
@@ -59,10 +60,7 @@ body {
 .banner-overlay {
    position: absolute;
 
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
+   inset: 0;
 
    pointer-events: none;
 
@@ -88,12 +86,11 @@ body {
    background: #ffffff;
 
    border-bottom: 1px solid #eeeeee;
-
-   box-shadow: none;
 }
 
 .header-content {
    display: flex;
+
    flex-direction: column;
 }
 
@@ -152,7 +149,9 @@ body {
 }
 
 
-/* Rating */
+/* =========================================================
+   RESTAURANT RATING
+   ========================================================= */
 
 .info-rating {
    display: flex;
@@ -162,18 +161,47 @@ body {
    gap: 5px;
 }
 
+
+/* Green circular star badge */
+
 .rating-badge {
-   padding: 3px 6px;
+   width: 20px;
+   height: 20px;
 
-   color: #ffffff;
+   min-width: 20px;
+   min-height: 20px;
 
-   background: #1ba672;
+   display: inline-flex;
 
-   border-radius: 4px;
+   align-items: center;
+   justify-content: center;
 
-   font-size: 11px;
+   flex: 0 0 20px;
+
+   padding: 0;
+
+   background: #159447;
+
+   border-radius: 50%;
+
+   overflow: hidden;
+
+   box-sizing: border-box;
+}
+
+
+
+/* Rating number */
+
+.rating-value {
+   color: #282c3f;
+
+   font-size: 12px;
    font-weight: 800;
 }
+
+
+/* Number of ratings */
 
 .rating-text {
    color: #686b78;
@@ -183,7 +211,9 @@ body {
 }
 
 
-/* Cost */
+/* =========================================================
+   COST
+   ========================================================= */
 
 .info-cost {
    color: #3d4152;
@@ -193,20 +223,27 @@ body {
 }
 
 
-/* Delivery */
+/* =========================================================
+   DELIVERY
+   ========================================================= */
 
 .info-delivery {
-   color: #686b78;
    display: flex;
+
    align-items: center;
+
+   color: #686b78;
+
    font-size: 12px;
    font-weight: 600;
 }
+
 .info-delivery svg {
-  display: flex;
-  align-items: center;
-  margin-right: 4px;
-  transform: translateY(-2px);
+   flex-shrink: 0;
+
+   margin-right: 4px;
+
+   transform: translateY(-1px);
 }
 
 
@@ -222,10 +259,6 @@ body {
    padding: 18px 4px 60px;
 
    background: #ffffff;
-
-   border-radius: 0;
-
-   box-shadow: none;
 }
 
 
@@ -321,7 +354,9 @@ body {
 }
 
 
-/* Item name */
+/* =========================================================
+   ITEM NAME
+   ========================================================= */
 
 .item-name {
    margin: 0 0 5px;
@@ -335,10 +370,12 @@ body {
 }
 
 
-/* Item price */
+/* =========================================================
+   ITEM PRICE
+   ========================================================= */
 
 .item-price {
-   margin: 0 0 6px;
+   margin: 0 0 7px;
 
    color: #555a75;
 
@@ -347,19 +384,64 @@ body {
 }
 
 
-/* Item rating */
+/* =========================================================
+   ITEM RATING
+   ========================================================= */
 
 .item-rating {
+   display: flex;
+
+   align-items: center;
+
+   gap: 4px;
+
    margin: 0 0 7px;
 
-   color: #1ba672;
+   color: #282c3f;
 
    font-size: 11px;
    font-weight: 700;
+
+   line-height: 1;
 }
 
 
-/* Item description */
+/* Green circular star badge */
+
+.item-rating-badge {
+   width: 20px;
+   height: 20px;
+
+   min-width: 20px;
+   min-height: 20px;
+
+   display: inline-flex;
+
+   align-items: center;
+   justify-content: center;
+
+   flex: 0 0 20px;
+
+   background: #159447;
+
+   border-radius: 50%;
+
+   overflow: hidden;
+}
+
+
+/* Rating count */
+
+.item-rating-count {
+   color: #686b78;
+
+   font-weight: 500;
+}
+
+
+/* =========================================================
+   ITEM DESCRIPTION
+   ========================================================= */
 
 .item-description {
    display: -webkit-box;
@@ -442,6 +524,8 @@ body {
 
    font-size: 11px;
    font-weight: 800;
+
+   cursor: pointer;
 
    transform: translateX(50%);
 
@@ -605,6 +689,30 @@ body {
       padding: 6px 10px;
 
       font-size: 10px;
+   }
+
+   .restaurant-info-grid {
+      align-items: flex-start;
+   }
+
+   .rating-badge {
+      width: 19px;
+      height: 19px;
+
+      min-width: 19px;
+      min-height: 19px;
+
+      flex-basis: 19px;
+   }
+
+   .item-rating-badge {
+      width: 17px;
+      height: 17px;
+
+      min-width: 17px;
+      min-height: 17px;
+
+      flex-basis: 17px;
    }
 }
 
