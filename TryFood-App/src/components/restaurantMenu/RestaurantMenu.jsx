@@ -266,15 +266,12 @@ function RestaurantMenu() {
                                     }
                                  </h3>
 
-
                                  <p className="item-price">
                                     ₹
                                     {
-                                       item?.price
-                                          ? (
-                                             item.price / 100
-                                          ).toFixed(2)
-                                          : 'N/A'
+                                       (
+                                          (item?.price ?? item?.defaultPrice) / 100
+                                       ).toFixed(2)
                                     }
                                  </p>
 
