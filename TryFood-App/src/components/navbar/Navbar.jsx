@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 import {
    Home,
    Info,
@@ -13,6 +14,9 @@ import './Navbar.css';
 
 const Navbar = () => {
    const [btnNameReact, setBtnNameReact] = useState('Login');
+
+   const cartCount = useSelector((store) => store.cart.items.length);
+
    const location = useLocation();
 
    const isActive = (path) => location.pathname === path;
@@ -26,6 +30,7 @@ const Navbar = () => {
 
    return (
       <header className="header">
+
          {/* Logo */}
          <div className="logo-container">
             <Link to="/" className="logo-link">
@@ -46,7 +51,17 @@ const Navbar = () => {
                         to={path}
                         className={isActive(path) ? 'active' : ''}
                      >
-                        <Icon size={18} strokeWidth={2} />
+                        <div className="cart-icon-wrapper">
+                           <Icon size={18} strokeWidth={2} />
+
+                           {/* Cart Count */}
+                           {path === '/cart' && cartCount > 0 && (
+                              <span className="cart-badge">
+                                 {cartCount}
+                              </span>
+                           )}
+                        </div>
+
                         <span>{label}</span>
                      </Link>
                   </li>

@@ -1,0 +1,930 @@
+
+/* =========================================================
+   CART PAGE
+========================================================= */
+
+.cart-page {
+   width: 100%;
+   min-height: calc(100vh - 76px);
+
+   background: #f7f7f7;
+
+   padding: 28px 5% 60px;
+
+   color: #1f1f1f;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.cart-topbar {
+   max-width: 1200px;
+   margin: 0 auto 24px;
+
+   display: flex;
+   align-items: center;
+
+   gap: 14px;
+}
+
+.back-btn {
+   width: 42px;
+   height: 42px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   color: #3d4152;
+   background: #ffffff;
+
+   border: 1px solid #eeeeee;
+   border-radius: 8px;
+
+   text-decoration: none;
+
+   transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+   color: #fc8019;
+   border-color: #fc8019;
+   background: #fff7f0;
+}
+
+.cart-topbar h1 {
+   margin: 0;
+
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.cart-topbar span {
+   display: block;
+
+   margin-top: 2px;
+
+   color: #686b78;
+
+   font-size: 13px;
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.cart-layout {
+   max-width: 1200px;
+   margin: 0 auto;
+
+   display: grid;
+
+   grid-template-columns: minmax(0, 1fr) 380px;
+
+   gap: 24px;
+
+   align-items: start;
+}
+
+.cart-left {
+   display: flex;
+   flex-direction: column;
+
+   gap: 16px;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.cart-card {
+   background: #ffffff;
+
+   border: 1px solid #eeeeee;
+
+   border-radius: 4px;
+
+   padding: 20px;
+}
+
+
+/* =========================================================
+   RESTAURANT
+========================================================= */
+
+.restaurant-card {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.restaurant-info {
+   display: flex;
+   align-items: center;
+
+   gap: 12px;
+}
+
+.restaurant-logo {
+   width: 44px;
+   height: 44px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background: #fff4eb;
+   color: #fc8019;
+
+   border-radius: 8px;
+}
+
+.restaurant-info h3 {
+   margin: 0 0 4px;
+
+   font-size: 16px;
+}
+
+.restaurant-info p {
+   margin: 0;
+
+   color: #686b78;
+
+   font-size: 13px;
+}
+
+.delivery-time {
+   color: #686b78;
+
+   font-size: 13px;
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.address-card {
+   display: flex;
+   align-items: center;
+
+   gap: 14px;
+}
+
+.address-icon {
+   width: 40px;
+   height: 40px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   flex-shrink: 0;
+
+   color: #fc8019;
+
+   background: #fff4eb;
+
+   border-radius: 50%;
+}
+
+.address-content {
+   flex: 1;
+}
+
+.address-content h3 {
+   margin: 0 0 3px;
+
+   font-size: 14px;
+}
+
+.address-content strong {
+   display: block;
+
+   margin-bottom: 2px;
+
+   font-size: 14px;
+}
+
+.address-content p {
+   margin: 0;
+
+   color: #686b78;
+
+   font-size: 12px;
+}
+
+.change-address {
+   padding: 8px 14px;
+
+   color: #fc8019;
+   background: #ffffff;
+
+   border: 1px solid #fc8019;
+   border-radius: 5px;
+
+   font-size: 12px;
+   font-weight: 600;
+
+   cursor: pointer;
+}
+
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.items-card {
+   padding: 0;
+}
+
+.section-heading {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   padding: 18px 20px;
+
+   border-bottom: 1px solid #eeeeee;
+}
+
+.section-heading h2 {
+   margin: 0;
+
+   font-size: 16px;
+}
+
+.add-more-btn {
+   border: none;
+
+   background: transparent;
+   color: #fc8019;
+
+   font-size: 13px;
+   font-weight: 600;
+
+   cursor: pointer;
+}
+
+.cart-items {
+   display: flex;
+   flex-direction: column;
+}
+
+.cart-item {
+   position: relative;
+
+   display: grid;
+
+   grid-template-columns: 76px minmax(0, 1fr) auto;
+
+   gap: 14px;
+
+   padding: 20px;
+
+   border-bottom: 1px solid #eeeeee;
+}
+
+.cart-item:last-child {
+   border-bottom: none;
+}
+
+
+/* =========================================================
+   ITEM IMAGE
+========================================================= */
+
+.cart-item-image {
+   width: 76px;
+   height: 76px;
+
+   overflow: hidden;
+
+   border-radius: 8px;
+
+   background: #f1f1f1;
+}
+
+.cart-item-image img {
+   width: 100%;
+   height: 100%;
+
+   display: block;
+
+   object-fit: cover;
+}
+
+
+/* =========================================================
+   ITEM DETAILS
+========================================================= */
+
+.cart-item-details {
+   min-width: 0;
+
+   padding-right: 10px;
+}
+
+.item-title-row {
+   display: flex;
+   align-items: center;
+
+   gap: 6px;
+}
+
+.item-title-row > div {
+   display: flex;
+   align-items: center;
+
+   gap: 6px;
+
+   min-width: 0;
+}
+
+.item-title-row h3 {
+   margin: 0;
+
+   font-size: 14px;
+   font-weight: 600;
+
+   color: #1f1f1f;
+}
+
+.item-description {
+   margin: 5px 0;
+
+   color: #686b78;
+
+   font-size: 11px;
+   line-height: 1.4;
+}
+
+.item-price {
+   display: block;
+
+   margin-top: 5px;
+
+   font-size: 13px;
+}
+
+
+/* =========================================================
+   VEG / NON VEG
+========================================================= */
+
+.veg-icon,
+.nonveg-icon {
+   width: 13px;
+   height: 13px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   flex-shrink: 0;
+
+   border: 1px solid;
+}
+
+.veg-icon {
+   border-color: #168b45;
+}
+
+.nonveg-icon {
+   border-color: #d93025;
+}
+
+.veg-icon span,
+.nonveg-icon span {
+   width: 5px;
+   height: 5px;
+
+   border-radius: 50%;
+}
+
+.veg-icon span {
+   background: #168b45;
+}
+
+.nonveg-icon span {
+   background: #d93025;
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.quantity-control {
+   height: 32px;
+
+   display: flex;
+   align-items: center;
+
+   border: 1px solid #d9d9d9;
+   border-radius: 5px;
+
+   background: #ffffff;
+
+   overflow: hidden;
+}
+
+.quantity-control button {
+   width: 30px;
+   height: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border: none;
+
+   background: transparent;
+   color: #fc8019;
+
+   cursor: pointer;
+}
+
+.quantity-control button:hover {
+   background: #fff4eb;
+}
+
+.quantity-control span {
+   min-width: 24px;
+
+   text-align: center;
+
+   font-size: 13px;
+   font-weight: 600;
+}
+
+
+/* =========================================================
+   REMOVE
+========================================================= */
+
+.remove-item {
+   position: absolute;
+
+   right: 20px;
+   bottom: 18px;
+
+   display: none;
+
+   border: none;
+
+   background: transparent;
+   color: #999;
+
+   cursor: pointer;
+}
+
+.remove-item:hover {
+   color: #d93025;
+}
+
+
+/* =========================================================
+   COUPON
+========================================================= */
+
+.coupon-card {
+   display: flex;
+   align-items: center;
+
+   gap: 14px;
+
+   cursor: pointer;
+
+   transition: border-color 0.2s ease;
+}
+
+.coupon-card:hover {
+   border-color: #fc8019;
+}
+
+.coupon-icon {
+   width: 40px;
+   height: 40px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   color: #fc8019;
+
+   background: #fff4eb;
+
+   border-radius: 50%;
+}
+
+.coupon-content {
+   flex: 1;
+}
+
+.coupon-content h3 {
+   margin: 0 0 3px;
+
+   font-size: 14px;
+}
+
+.coupon-content p {
+   margin: 0;
+
+   color: #686b78;
+
+   font-size: 12px;
+}
+
+
+/* =========================================================
+   SAFETY
+========================================================= */
+
+.safety-card {
+   display: flex;
+   align-items: flex-start;
+
+   gap: 12px;
+
+   color: #686b78;
+}
+
+.safety-card svg {
+   flex-shrink: 0;
+
+   color: #168b45;
+}
+
+.safety-card h3 {
+   margin: 0 0 5px;
+
+   color: #3d4152;
+
+   font-size: 13px;
+}
+
+.safety-card p {
+   margin: 0;
+
+   font-size: 11px;
+   line-height: 1.5;
+}
+
+
+/* =========================================================
+   BILL
+========================================================= */
+
+.bill-section {
+   position: sticky;
+   top: 96px;
+}
+
+.bill-card {
+   background: #ffffff;
+
+   border: 1px solid #eeeeee;
+
+   border-radius: 4px;
+
+   padding: 22px;
+}
+
+.bill-card h2 {
+   margin: 0 0 20px;
+
+   font-size: 17px;
+}
+
+.bill-row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   margin-bottom: 13px;
+
+   color: #686b78;
+
+   font-size: 13px;
+}
+
+.bill-row span:last-child {
+   color: #3d4152;
+}
+
+.bill-row .free {
+   color: #168b45;
+   font-weight: 600;
+}
+
+.bill-divider {
+   height: 1px;
+
+   margin: 18px 0;
+
+   background: #eeeeee;
+}
+
+.bill-total {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   color: #1f1f1f;
+
+   font-size: 16px;
+}
+
+.checkout-btn {
+   width: 100%;
+
+   height: 50px;
+
+   margin-top: 22px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   gap: 8px;
+
+   border: none;
+   border-radius: 5px;
+
+   background: #fc8019;
+   color: #ffffff;
+
+   font-size: 14px;
+   font-weight: 700;
+
+   cursor: pointer;
+
+   transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+   background: #e86f0c;
+
+   box-shadow: 0 5px 15px rgba(252, 128, 25, 0.25);
+}
+
+.checkout-btn:active {
+   transform: translateY(1px);
+}
+
+
+/* =========================================================
+   EMPTY CART
+========================================================= */
+
+.empty-cart {
+   min-height: 70vh;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   text-align: center;
+}
+
+.empty-cart-icon {
+   width: 100px;
+   height: 100px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   margin-bottom: 20px;
+
+   color: #fc8019;
+
+   background: #fff4eb;
+
+   border-radius: 50%;
+}
+
+.empty-cart h2 {
+   margin: 0 0 8px;
+
+   font-size: 22px;
+}
+
+.empty-cart p {
+   margin: 0 0 22px;
+
+   color: #686b78;
+
+   font-size: 14px;
+}
+
+.browse-food-btn {
+   padding: 12px 24px;
+
+   background: #fc8019;
+   color: #ffffff;
+
+   border-radius: 5px;
+
+   text-decoration: none;
+
+   font-size: 14px;
+   font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+   .cart-page {
+      padding: 24px 20px 50px;
+   }
+
+   .cart-layout {
+      grid-template-columns: 1fr;
+   }
+
+   .bill-section {
+      position: static;
+   }
+
+   .bill-card {
+      max-width: none;
+   }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+   .cart-page {
+      padding: 18px 12px 100px;
+   }
+
+   .cart-topbar {
+      margin-bottom: 16px;
+   }
+
+   .cart-topbar h1 {
+      font-size: 20px;
+   }
+
+   .cart-layout {
+      gap: 12px;
+   }
+
+   .cart-left {
+      gap: 12px;
+   }
+
+   .cart-card {
+      padding: 15px;
+   }
+
+
+   /* Restaurant */
+
+   .restaurant-card {
+      padding: 14px;
+   }
+
+
+   /* Address */
+
+   .address-card {
+      padding: 14px;
+   }
+
+   .change-address {
+      padding: 7px 10px;
+   }
+
+
+   /* Items */
+
+   .section-heading {
+      padding: 15px;
+   }
+
+   .cart-item {
+      grid-template-columns: 64px minmax(0, 1fr);
+
+      gap: 12px;
+
+      padding: 16px 15px;
+
+      padding-bottom: 55px;
+   }
+
+   .cart-item-image {
+      width: 64px;
+      height: 64px;
+   }
+
+   .cart-item-details {
+      padding-right: 0;
+   }
+
+   .item-title-row h3 {
+      font-size: 13px;
+   }
+
+   .item-description {
+      font-size: 10px;
+   }
+
+   .item-price {
+      font-size: 12px;
+   }
+
+
+   /* Quantity */
+
+   .quantity-control {
+      position: absolute;
+
+      left: 91px;
+      bottom: 16px;
+
+      height: 30px;
+   }
+
+
+   /* Remove */
+
+   .remove-item {
+      display: flex;
+
+      right: 15px;
+      bottom: 20px;
+   }
+
+
+   /* Coupon */
+
+   .coupon-card {
+      padding: 15px;
+   }
+
+
+   /* Safety */
+
+   .safety-card {
+      padding: 15px;
+   }
+
+
+   /* Bill */
+
+   .bill-card {
+      padding: 18px 15px;
+   }
+
+   .checkout-btn {
+      height: 52px;
+   }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+   .cart-page {
+      padding-left: 8px;
+      padding-right: 8px;
+   }
+
+   .cart-item {
+      grid-template-columns: 58px minmax(0, 1fr);
+
+      gap: 10px;
+   }
+
+   .cart-item-image {
+      width: 58px;
+      height: 58px;
+   }
+
+   .quantity-control {
+      left: 78px;
+   }
+
+   .item-title-row h3 {
+      font-size: 12px;
+   }
+}

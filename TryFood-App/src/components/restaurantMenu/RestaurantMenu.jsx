@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom';
 import { Bike, Star } from 'lucide-react';
-
-import ShimmerMenu from '../shimmerMenu/ShimmerMenu.jsx';
+import { useDispatch } from 'react-redux';
+import ShimmerMenu from '../shimmerMenu/ShimmerMenu';
 import { CDN_URL } from '../../utils/constants';
 import useRestaurantMenu from '../../utils/useRestaurantMenu';
+import { addItemToCart, removeItemFromCart } from '../../utils/cartSlice';
 
 import './RestaurantMenu.css';
 
@@ -76,6 +77,12 @@ function RestaurantMenu() {
    // =========================================================
    // RENDER
    // =========================================================
+
+   const dispatch = useDispatch();
+
+   const handleAddToCart = (item) => {
+      dispatch(addItemToCart(item));
+   }
 
    return (
       <div className="menu-container">
@@ -370,6 +377,7 @@ function RestaurantMenu() {
                                        <button
                                           className="add-btn"
                                           type="button"
+                                          onClick={() => handleAddToCart(item)}
                                        >
                                           ADD
                                        </button>

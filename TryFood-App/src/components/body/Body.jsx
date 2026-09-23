@@ -38,7 +38,7 @@ const Body = () => {
                   )
                   .find((restaurants) => Array.isArray(restaurants)) ?? [];
 
-            console.log('Restaurants:', restaurants);
+            // console.log('Restaurants:', restaurants);
 
             setListOfRestaurants(restaurants);
             setFilteredRestaurant(restaurants);
