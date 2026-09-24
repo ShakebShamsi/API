@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import {
@@ -6,14 +5,11 @@ import {
    Info,
    Phone,
    ShoppingCart,
-   LogIn,
-   LogOut,
 } from 'lucide-react';
 
 import './Navbar.css';
 
 const Navbar = () => {
-   const [btnNameReact, setBtnNameReact] = useState('Login');
 
    const cartCount = useSelector((store) => store.cart.items.length);
 
@@ -66,26 +62,6 @@ const Navbar = () => {
                      </Link>
                   </li>
                ))}
-
-               {/* Login / Logout */}
-               <li>
-                  <button
-                     className="loginBtn"
-                     onClick={() =>
-                        setBtnNameReact((prev) =>
-                           prev === 'Login' ? 'Logout' : 'Login'
-                        )
-                     }
-                  >
-                     {btnNameReact === 'Login' ? (
-                        <LogIn size={18} strokeWidth={2} />
-                     ) : (
-                        <LogOut size={18} strokeWidth={2} />
-                     )}
-
-                     <span>{btnNameReact}</span>
-                  </button>
-               </li>
             </ul>
          </nav>
       </header>
