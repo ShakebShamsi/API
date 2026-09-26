@@ -10,7 +10,6 @@ describe('App Component', () => {
             <App />
          </BrowserRouter>
       );
-
       expect(document.body).toBeInTheDocument();
    });
 });
