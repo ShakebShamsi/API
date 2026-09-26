@@ -66,8 +66,7 @@
    color: #93959f;
 }
 
-.search button,
-.filter-btn {
+.search button {
    padding: 0 22px;
 
    color: #ffffff;
@@ -77,23 +76,12 @@
    font-weight: 800;
 }
 
-.search button:hover,
-.filter-btn:hover {
+.search button:hover
+{
    background: #e56f0b;
 }
 
 
-/* =========================================================
-   FILTER BUTTON
-   ========================================================= */
-
-.filter-btn {
-   min-height: 50px;
-
-   border-radius: 4px;
-
-   white-space: nowrap;
-}
 
 
 /* =========================================================

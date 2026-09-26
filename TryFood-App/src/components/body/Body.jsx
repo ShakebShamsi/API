@@ -69,15 +69,6 @@ const Body = () => {
       setFilteredRestaurant(filtered);
    };
 
-   const handleTopRated = () => {
-      const filtered = listOfRestaurants.filter(
-         (restaurants) =>
-            Number(restaurants?.info?.avgRating) > 4
-      );
-
-      setFilteredRestaurant(filtered);
-   };
-
    if (listOfRestaurants.length === 0) {
       return <Shimmer />;
    }
@@ -111,15 +102,6 @@ const Body = () => {
                </button>
 
             </div>
-
-            {/* TOP RATED */}
-            <button
-               className="filter-btn"
-               onClick={handleTopRated}
-            >
-               Top Rated Restaurants
-            </button>
-
          </div>
 
          {/* RESTAURANTS */}
