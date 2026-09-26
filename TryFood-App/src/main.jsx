@@ -14,6 +14,7 @@ import Cart from './components/cart/Cart.jsx';
 import Error from './components/error/Error.jsx';
 import Body from './components/body/Body.jsx';
 import RestaurantMenu from './components/restaurantMenu/RestaurantMenu.jsx';
+import Profile from './components/profile/Profile.jsx';
 
 const appRouter = createBrowserRouter([
    {
@@ -36,6 +37,10 @@ const appRouter = createBrowserRouter([
             element: <Contact />,
          },
 
+         {
+            path: 'profile',
+            element: <Profile />
+         },
          {
             path: 'cart',
             element: <Cart />,
